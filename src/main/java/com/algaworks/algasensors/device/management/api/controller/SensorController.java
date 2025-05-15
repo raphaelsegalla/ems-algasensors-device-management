@@ -1,6 +1,6 @@
 package com.algaworks.algasensors.device.management.api.controller;
 
-import com.algaworks.algasensors.device.management.api.model.SensorImput;
+import com.algaworks.algasensors.device.management.api.model.SensorInput;
 import com.algaworks.algasensors.device.management.api.model.SensorOutput;
 import com.algaworks.algasensors.device.management.common.IdGenerator;
 import com.algaworks.algasensors.device.management.domain.model.Sensor;
@@ -29,7 +29,7 @@ public class SensorController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public SensorOutput create(@RequestBody SensorImput input) {
+    public SensorOutput create(@RequestBody SensorInput input) {
         Sensor sensor = Sensor.builder()
                 .id(new SensorId(IdGenerator.generateTSID()))
                 .name(input.getName())

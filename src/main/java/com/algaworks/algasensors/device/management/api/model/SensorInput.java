@@ -3,7 +3,7 @@ package com.algaworks.algasensors.device.management.api.model;
 import lombok.Data;
 
 @Data
-public class SensorImput {
+public class SensorInput {
 
     private String name;
     private String ip;
