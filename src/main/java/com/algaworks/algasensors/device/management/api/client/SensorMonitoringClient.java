@@ -10,6 +10,7 @@ import org.springframework.web.service.annotation.PutExchange;
 
 @HttpExchange("/api/sensors/{sensorId}/monitoring")
 public interface SensorMonitoringClient {
+
     @PutExchange("/enable")
     void enableMonitoring(@PathVariable TSID sensorId);
 
@@ -18,4 +19,5 @@ public interface SensorMonitoringClient {
 
     @GetExchange
     SensorMonitoringOutput getDetail(@PathVariable TSID sensorId);
+
 }
